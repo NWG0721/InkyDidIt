@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "InkyDidIt.Core": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
