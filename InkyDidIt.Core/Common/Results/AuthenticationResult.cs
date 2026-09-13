@@ -10,6 +10,7 @@ namespace InkyDidIt.Core.Common.Results
 	public class AuthenticationResult
 	{
 		public OperationResult<User> Result { get; set; }
+
 		public string? Token { get; set; }
 	}
 }
