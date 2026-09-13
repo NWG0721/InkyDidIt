@@ -1,6 +1,5 @@
 ﻿using InkyDidIt.Core.Common.Results;
 using InkyDidIt.Core.Entities.Task;
-using InkyDidIt.Core.Entities.UserEntities;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using System;
 using System.Collections.Generic;
@@ -18,7 +17,9 @@ namespace InkyDidIt.Core.Interfaces.Services
 		public Task<OperationResult<TodoItem>> AddManyTodoItemsAsync(ICollection<TodoItem> todoItems, CancellationToken cancellationToken);
 		public Task<OperationResult<TodoItem>> EditTodoItemAsync(TodoItem todoItem, CancellationToken cancellationToken);
 		public Task<OperationResult<TodoItem>> DeleteTodoItemAsync(TodoItem todoItem, CancellationToken cancellationToken);
-		public Task<OperationResult<TodoItem>> DeleteByIdTodoItemAsync(Guid Id, CancellationToken cancellationToken);
-		public Task<OperationResult<TodoItem>> DeleteManyByIdTodoItemsAsync(ICollection<Guid> Ids, CancellationToken cancellationToken);
+		public Task<OperationResult<TodoItem>> DeleteByIdTodoItemAsync(Guid id, CancellationToken cancellationToken);
+		public Task<OperationResult<TodoItem>> DeleteManyTodoItemsAsync(ICollection<TodoItem> todoItems, CancellationToken cancellationToken);
+
+		public Task<OperationResult<TodoItem>> DeleteManyByIdTodoItemsAsync(ICollection<Guid> ids, CancellationToken cancellationToken);
 	}
 }
